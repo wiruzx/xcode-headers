@@ -4,6 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "DVTViewController.h"
+
+@protocol IDESelectionSource;
+@protocol DVTStatefulObject;
+@protocol IDEWorkspaceDocumentProvider;
+
+@class IDESelection;
+@class DVTStateToken;
+@class IDEWorkspaceTabController;
+@class DVTStateToken;
+@class IDEWorkspace;
+@class IDEWorkspaceDocument;
 
 @interface IDEViewController : DVTViewController <IDESelectionSource, DVTStatefulObject>
 {
@@ -20,7 +32,7 @@
 @property(retain, nonatomic) IDEWorkspaceTabController *workspaceTabController; // @synthesize workspaceTabController=_workspaceTabController;
 @property(readonly) DVTStateToken *stateToken; // @synthesize stateToken=_stateToken;
 @property(copy) IDESelection *outputSelection; // @synthesize outputSelection=_outputSelection;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)setStateToken:(id)arg1;
 - (BOOL)_knowsAboutInstalledState;
 - (void)revertState;

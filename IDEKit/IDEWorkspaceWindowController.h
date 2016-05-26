@@ -4,6 +4,27 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "IDEEditorAreaContainer.h"
+
+@protocol DVTStatefulObject;
+@protocol DVTTabbedWindowControlling;
+@protocol DVTEditor;
+@protocol DVTInvalidation;
+
+@class IDEEditorDocument;
+@class IDEWorkspaceTabController;
+@class IDEToolbarDelegate;
+@class DVTNotificationToken;
+@class IDEWorkspace;
+@class _IDEWindowFullScreenSavedDebuggerTransitionValues;
+@class DVTTabBarEnclosureView;
+@class DVTBarBackground;
+@class DVTStateToken;
+@class DVTWeakInterposer;
+@class IDEWorkspaceWindow;
+@class IDEEditorArea;
+@class DVTStackBacktrace;
+@class DVTStackBacktrace;
 
 @interface IDEWorkspaceWindowController : NSWindowController <NSWindowDelegate, IDEEditorAreaContainer, DVTStatefulObject, DVTTabbedWindowControlling, DVTEditor, DVTInvalidation>
 {
@@ -68,7 +89,7 @@
 @property(copy, nonatomic) NSString *uniqueIdentifier; // @synthesize uniqueIdentifier=_uniqueIdentifier;
 @property(retain, nonatomic) NSTabView *tabView; // @synthesize tabView=_tabView;
 @property(retain, nonatomic) DVTTabBarEnclosureView *tabBarEnclosureView; // @synthesize tabBarEnclosureView=_tabBarEnclosureView;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)moveFocusToEditor:(id)arg1;
 - (void)dicardEditing;
 - (BOOL)commitEditingForAction:(int)arg1 errors:(id)arg2;

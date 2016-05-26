@@ -4,6 +4,23 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "IDEViewController.h"
+
+@protocol IDEDebuggerBarEditorInfoProvider;
+@class IDEEditorModeViewController;
+@class IDEEditorContext;
+@class IDEDebugBar;
+@class IDEDebugArea;
+
+@class DVTLayoutView_ML;
+@class DVTBorderedView;
+@class DVTReplacementView;
+@class DVTSplitView;
+@class DVTSplitViewItem;
+@class IDEWorkspaceTabControllerLayoutTree;
+@class DVTStateToken;
+@class IDENavigableItemArchivableRepresentation;
+@class IDEEditorDocument;
 
 @interface IDEEditorArea : IDEViewController <IDEDebuggerBarEditorInfoProvider>
 {
@@ -59,7 +76,7 @@
 @property(readonly) DVTReplacementView *debuggerAreaReplacementView; // @synthesize debuggerAreaReplacementView=_debuggerAreaReplacementView;
 @property(nonatomic) BOOL userWantsEditorVisible; // @synthesize userWantsEditorVisible=_userWantsEditorVisible;
 @property(retain) IDEEditorModeViewController *editorModeViewController; // @synthesize editorModeViewController=_editorModeViewController;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)_clearLayoutTreeForNavigationHUD;
 - (void)setLayoutTreeForNavigationHUD:(id)arg1;
 @property(readonly) IDEWorkspaceTabControllerLayoutTree *layoutTreeForNavigationHUD;

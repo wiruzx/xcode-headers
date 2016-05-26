@@ -4,6 +4,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "IDEViewController.h"
+
+@protocol IDEEditorDelegate;
+@class IDEEditorDocument;
+@protocol DVTTextFindable;
+@class IDEFileTextSettings;
 
 @interface IDEEditor : IDEViewController
 {
@@ -28,7 +34,7 @@
 @property(retain, nonatomic) IDEEditorDocument *documentForNavBarStructure; // @synthesize documentForNavBarStructure=_documentForNavBarStructure;
 @property(retain) IDEEditorDocument *document; // @synthesize document=_document;
 @property(retain) id <IDEEditorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (id)relatedMenuItemsForNavItem:(id)arg1;
 - (void)didSetupEditor;
 - (void)navigateToAnnotationWithRepresentedObject:(id)arg1 wantsIndicatorAnimation:(BOOL)arg2 exploreAnnotationRepresentedObject:(id)arg3;

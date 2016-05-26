@@ -4,6 +4,42 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "IDEViewController.h"
+
+@protocol IDEEditorContextProtocol;
+@protocol IDEEditorSplittingControllerDelegate;
+@protocol DVTFindBarHostable;
+@protocol IDEPathCellDelegate;
+@protocol DVTStateRepositoryDelegate;
+@protocol IDENavigableItemCoordinatorDelegate;
+@protocol IDEPathCellDelegate;
+@protocol IDEEditorDelegate;
+@protocol DVTScopeBarHost;
+
+@class IDENavBar;
+@class DVTGradientImagePopUpButton;
+@class IDEEditorStepperView;
+@class DVTStateRepository;
+@class IDENavigableItem;
+@class DVTFileDataType;
+@class DVTBindingToken;
+@class IDEEditorHistoryController;
+@class IDEEditorReadOnlyIndicatorController;
+@class DVTFindBar;
+@class IDEEditorIssueMenuController;
+@class IDEEditorSplittingController;
+@class IDEEditorHistoryItem;
+
+@protocol IDEEditorContextDelegate;
+
+@class IDENavigableItemCoordinator;
+@class DVTScopeBarsManager;
+@class IDEEditor;
+@class IDEEditorGeniusResults;
+@class IDEEditorMultipleContext;
+@class _IDEGeniusResultsContext;
+
+typedef id CDUnknownBlockType;
 
 @interface IDEEditorContext : IDEViewController <NSMenuDelegate, IDEEditorContextProtocol, IDEEditorSplittingControllerDelegate, DVTFindBarHostable, NSPathControlDelegate, IDEPathCellDelegate, DVTScopeBarHost, IDENavigableItemCoordinatorDelegate, IDEEditorDelegate, DVTStateRepositoryDelegate, NSAnimationDelegate>
 {
@@ -137,7 +173,7 @@
 @property(readonly) IDENavigableItemCoordinator *navigableItemCoordinator; // @synthesize navigableItemCoordinator=_navigableItemCoordinator;
 @property(retain) id <IDEEditorContextDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) IDEEditorArea *editorArea; // @synthesize editorArea=_editorArea;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)stateRepositoryDidChange:(id)arg1;
 - (id)_navigableItemForEditingFromArchivedRepresentation:(id)arg1 error:(id *)arg2;
 - (void)discardEditing;

@@ -4,6 +4,15 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "DVTTextView.h"
+
+@protocol DVTLayoutManagerDelegate;
+@class DVTTextCompletionController;
+@class DVTTextCompletionDataSource;
+@class DVTTextStorage;
+@class DVTLayoutManager;
+@class DVTSourceCodeLanguage;
+@protocol DVTCompletingTextViewDelegate;
 
 @interface DVTCompletingTextView : DVTTextView <DVTLayoutManagerDelegate, NSTableViewDelegate>
 {
@@ -31,7 +40,7 @@
 @property(getter=isCurrentlyDoingNonUserEditing) BOOL currentlyDoingNonUserEditing; // @synthesize currentlyDoingNonUserEditing=_currentlyDoingNonUserEditing;
 @property unsigned long long modifierFlagsAtLastSingleMouseDown; // @synthesize modifierFlagsAtLastSingleMouseDown=_modifierFlagsAtLastSingleMouseDown;
 @property double accessoryAnnotationWidth; // @synthesize accessoryAnnotationWidth=_accessoryAnnotationWidth;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (BOOL)validateUserInterfaceItem:(id)arg1;
 - (void)setMarkedText:(id)arg1 selectedRange:(struct _NSRange)arg2 replacementRange:(struct _NSRange)arg3;
 - (void)becomeMainWindow;

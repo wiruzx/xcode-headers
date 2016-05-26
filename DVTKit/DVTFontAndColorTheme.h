@@ -4,6 +4,10 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+@protocol DVTPreferenceSet;
+
+@class DVTFontAndColorTheme;
+@class DVTCustomDataSpecifier;
 
 @interface DVTFontAndColorTheme : NSObject <DVTPreferenceSet>
 {
@@ -96,7 +100,7 @@
 @property(readonly, getter=isBuiltIn) BOOL builtIn; // @synthesize builtIn=_builtIn;
 @property(retain) NSImage *image; // @synthesize image=_image;
 @property(copy) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (BOOL)hasLightBackground;
 - (void)setFont:(id)arg1 forNodeTypes:(id)arg2;
 - (void)setColor:(id)arg1 forNodeTypes:(id)arg2;

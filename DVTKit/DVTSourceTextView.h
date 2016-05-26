@@ -4,6 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "DVTCompletingTextView.h"
+
+@protocol DVTSourceTextScrollViewDelegate;
+@class DVTTextAnnotationIndicatorAnimation;
+@class DVTTextDocumentLocation;
+@class DVTTextPageGuideVisualization;
+@class DVTAnnotationManager;
+@class DVTMutableRangeArray;
+@class DVTObservingToken;
+@protocol DVTCancellable;
+typedef id CDUnknownBlockType;
+@protocol DVTSourceTextViewDelegate;
 
 @interface DVTSourceTextView : DVTCompletingTextView <NSAnimationDelegate, NSLayoutManagerDelegate, DVTSourceTextScrollViewDelegate>
 {
@@ -83,7 +95,7 @@
 @property unsigned long long temporaryLinkHoverAltModifierFlags; // @synthesize temporaryLinkHoverAltModifierFlags=_temporaryLinkHoverAltModifierFlags;
 @property unsigned long long temporaryLinkHoverModifierFlags; // @synthesize temporaryLinkHoverModifierFlags=_temporaryLinkHoverModifierFlags;
 @property(nonatomic) BOOL wrapsLines; // @synthesize wrapsLines=_wrapsLines;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)viewDidEndLiveResize;
 - (void)viewWillStartLiveResize;
 - (void)updateInsertionPointStateAndRestartTimer:(BOOL)arg1;
